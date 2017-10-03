@@ -4,7 +4,6 @@
 	 520  -- r-x-w----
 	 764  -- rwxrw-r--
 	 440  -- r--r-----
-
 2.- sudo bash ; groupadd --ingroup office1 ; groupadd --ingroup office2
 3.- sudo adduser gearoid --ingroup office1 ; sudo adduser paul --ingroup office1
 4.- sudo adduser anna --ingroup office2 ; sudo adduser emma --ingroup office2

@@ -12,4 +12,3 @@
 8. d
 9. Larry Ewing
 10. ElementaryOS, Lubuntu, Bodhi Linux
-
