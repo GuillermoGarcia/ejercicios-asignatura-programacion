@@ -1,8 +1,8 @@
 /**
  * Muestra por pantalla una piramide invertida y hueca de base 9 asteriscos
- *
+ * Ejercicio 8 Tema 1
  * @author Guillermo Garcia 
- */
+**/
 
 public class Ejercicio08 { // Clase principal
   public static void main(String[] args) {

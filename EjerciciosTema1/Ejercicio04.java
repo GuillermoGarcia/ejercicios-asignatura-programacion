@@ -1,8 +1,8 @@
 /**
  * Muestra por pantalla el horario de 1º DAM
- *
+ * Ejercicio 4 Tema 1
  * @author Guillermo Garcia 
- */
+**/
 
 public class Ejercicio04 { // Clase principal
   public static void main(String[] args) {

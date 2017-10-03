@@ -1,8 +1,8 @@
 /**
  * Muestra por pantalla el horario de 1º DAM con Colores
- *
+ * Ejercicio 5 Tema 1
  * @author Guillermo Garcia 
- */
+**/
 
 public class Ejercicio05 { // Clase principal
   public static void main(String[] args) {

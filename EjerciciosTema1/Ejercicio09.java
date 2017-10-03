@@ -1,8 +1,8 @@
 /**
  * Muestra por pantalla el Mech
- *
+ * Ejercicio 9 Tema 1
  * @author Guillermo Garcia 
- */
+**/
 
 public class Ejercicio09 { // Clase principal
   public static void main(String[] args) {

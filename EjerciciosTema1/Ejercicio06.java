@@ -1,8 +1,8 @@
 /**
  * Muestra por pantalla una piramide de base 9 asteriscos
- *
+ * Ejercicio 6 Tema 1
  * @author Guillermo Garcia 
- */
+**/
 
 public class Ejercicio06 { // Clase principal
   public static void main(String[] args) {

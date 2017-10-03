@@ -1,8 +1,8 @@
 /**
  * Muestra por pantalla el nombre, dirección y teléfono del Alumno
- *
+ * Ejercicio 2 Tema 1
  * @author Guillermo Garcia 
- */
+**/
 
 public class Ejercicio02 { // Clase principal
   public static void main(String[] args) {
