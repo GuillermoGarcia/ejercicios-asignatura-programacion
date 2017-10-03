@@ -1,0 +1,19 @@
+1.-  654  --  rw-r-xr--
+	 766  -- rwxrw-rw-
+	 777  -- rwxrwxrwx
+	 520  -- r-x-w----
+	 764  -- rwxrw-r--
+	 440  -- r--r-----
+
+2.- sudo bash ; groupadd --ingroup office1 ; groupadd --ingroup office2
+3.- sudo adduser gearoid --ingroup office1 ; sudo adduser paul --ingroup office1
+4.- sudo adduser anna --ingroup office2 ; sudo adduser emma --ingroup office2
+5.- su gearoid ; touch topsecret.txt ; chmod 600 topsecret.txt
+6.- touch sales.txt ; chmod g+rw sales.txt
+7.- exit; su anna ; cd ; touch employees.txt; chmod 664 employees.txt
+8.- sudo adduser student ; sudo cp employees.txt /home/student/employees.txt ; sudo chown student /home/student/employess.txt ; sudo chgrp student /home/student/employess.txt 
+9.- su paul ; cp /usr/bin/xclock myclock ; ./myclock
+10.- chmod 744 myclock
+11.- sudo adduser jim --ingroup office2 ; mkdir /home/jim/shared
+13.- sudo chmod a+r -R /home/jim/shared
+17.- Permiso Denegado

@@ -1,0 +1,11 @@
+1. ls *.jpg
+2. ls /usr/bin/j*
+3. ls /usr/bin/k?a*
+4. ls /bin/*n
+5. ls -R /etc
+6. mkdir test ; cp /bin/gzip test ; cp test/gzip test/gzip2
+7. mv test test2 ; mkdir test3 ; mv test2/* test3/ ; rm test2
+8. touch *?Hello all?* => Crea dos archivos diferentes, es mala idea ya que 
+9. mkdir multimedia_test ; cp -R multimedia/* multimedia_test ; touch multimedia/video/films.txt ; touch multimedia/video/actors.txt ; touch multimedia_test/video/films.txt ; cp -Ru multimedia/* multimedia_test/
+10. rm -ri multimedia/pictures/others
+11. mv multimedia/video/films.txt multimedia/my_films.txt   ó  mv films.txt ../

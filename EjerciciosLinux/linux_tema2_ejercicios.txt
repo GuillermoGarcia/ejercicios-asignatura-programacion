@@ -1,0 +1,28 @@
+Linux Ejercicios Tema 2
+
+1. /etc
+2. b
+3. ls
+4. ls ..
+5. cal 10 1976
+6.ls /bin
+7a. ls /usr/bin
+7b. cd .. ; cd.. ; cd usr ; cd bin ; ls
+7c. cd /urs/bin ; ls
+8. ls -R /etc
+9. ls -S /usr/bin/X11
+10. ls -Slh /etc
+11. ls -rSsh /bin
+12. ls /
+13. ls ../../..
+14. mkdir /home/usuario/expenses
+15. mkdir: can't create directory <</etc/prueba>>: Permission Denied
+16. cat /etc/fstab/
+17. head /etc/bash.bashrc
+18. cd ; mkdir multimedia ; cd multimedia ; mkdir music pictures video slides ; cd pictures ; mkdir personal other
+19. touch multimedia/music/favourite_styles.txt
+20. ee multimedia/music/favourite_styles.txt
+21. cat multimedia/music/favourite_styles.txt
+22. head -n3 multimedia/music/favourite_styles.txt
+23. tail -n1 multimedia/music/favourite_styles.txt
+24. tail -n+2 multimedia/music/favourite_styles.txt

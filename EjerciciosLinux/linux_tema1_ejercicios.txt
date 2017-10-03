@@ -1,0 +1,15 @@
+1. c
+2. a
+3a. Steam Os, Play Linux
+3b. Ubuntu, Debian, Slimeware
+4a. (Distrowatch) Ubuntu, Debian, Archlinux, OpenSuse, Fedora, Raspbian, 
+4b. Ubuntu, Debian, 
+5a. Linus Torvalds
+5b. Create a better terminal emulator than Minix, then upgrade to a free OS as hobby.
+6. b
+7a. Yes, first one only work in Torvalds computer.
+7b. Now it's not hardware-dependent
+8. d
+9. Larry Ewing
+10. ElementaryOS, Lubuntu, Bodhi Linux
+
