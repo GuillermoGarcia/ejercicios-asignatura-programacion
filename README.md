@@ -8,3 +8,8 @@ Resolución de los Ejercicios de la Asignatura Programación, *1º DAM (Desarrol
  * Tema 1. ¡Hola Mundo! Salida por pantalla.
  * Tema 2. Variables.
  * Tema 3. Lectura de datos desde teclado.
+
+
+## Bibliografía
+
+![Aprende Java con Ejercicios](imagenes/aprendejava.jpg)
