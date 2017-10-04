@@ -12,4 +12,5 @@ Resolución de los Ejercicios de la Asignatura Programación, *1º DAM (Desarrol
 
 ## Bibliografía
 
-![Aprende Java con Ejercicios](Imagenes/aprendejava.jpeg = 200x388)
+![Aprende Java con Ejercicios](Imagenes/aprendejava.jpeg)){:height="388px" width="200px"}.
+
