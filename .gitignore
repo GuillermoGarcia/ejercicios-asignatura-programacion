@@ -1,1 +1,7 @@
+# Archivos Compilados Java
+
 *.class
+
+# Copias de Seguridad
+
+*.bak
