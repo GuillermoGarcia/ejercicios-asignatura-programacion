@@ -9,7 +9,7 @@
 
 import java.util.Scanner;
 
-public class Ejercicio09 {
+public class Ejercicio10 {
   public static void main (String args[]) {
     Scanner s = new Scanner(System.in);
     
