@@ -16,10 +16,10 @@
      
      Scanner s = new Scanner(System.in);
      
-     System.out.println("Por favor, facilite la nota del primer examen: ");
+     System.out.print("Por favor, facilite la nota del primer examen: ");
      double notaPrimerExamen = s.nextDouble();
 
-     System.out.println("Por favor, facilite la nota media deseada: ");
+     System.out.print("Por favor, facilite la nota media deseada: ");
      double mediaDeseada = s.nextDouble();
      
      double notaSegundoExamen = (mediaDeseada-(notaPrimerExamen*0.4))/0.6;
