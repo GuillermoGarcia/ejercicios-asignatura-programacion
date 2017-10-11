@@ -1,31 +1,41 @@
 /*
- * Solución Ejercicio 6 Tema 4
+ * Solución Ejercicio 7 Tema 4
  * 
- * Realiza un programa que calcule el tiempo que tardará en caer un objeto desde
- * una altura h. Aplica la fórmula t = √(2h/g) siendo g = 9.81m/s^2 * 
+ * Realiza un programa que calcule la media de tres notas.
  * 
  * @author Guillermo García
  */
 
 import java.util.Scanner;
 
-public class Ejercicio06 {
+public class Ejercicio07 {
   public static void main (String[] args){
     
     Scanner s = new Scanner(System.in);
     
-    System.out.print("Desde que altura desea dejar caer el objeto (metros): ");
-    double altura = s.nextDouble();
+    System.out.print("Dime las tres notas, separadas por espacios, de la que"+
+    "vamos ha hacer la media: ");
+    double notaPrimera = s.nextDouble();
+    double notaSegunda = s.nextDouble();
+    double notaTercera = s.nextDouble();
         
-    if (altura <= 0){
-      System.out.print("Dejarlo caer desde el suelo o el subsuelo no es posible."+
-      "La altura debe ser mayor de 0: ");
-      altura = s.nextDouble();
+    if (notaPrimera < 0) {
+      System.out.print("No se permite una nota negativa, vuelva a introducir la"+
+      "primera nota: ");
+      notaPrimera = s.nextDouble();
+    } else if (notaSegunda < 0) {
+      System.out.print("No se permite una nota negativa, vuelva a introducir la"+
+      "segunda nota: ");
+      notaSegunda = s.nextDouble();
+    } else if (notaTercera < 0) {
+      System.out.print("No se permite una nota negativa, vuelva a introducir la"+
+      "tercera nota: ");
+      notaTercera = s.nextDouble();
     }
-    double tiempo = Math.sqrt((2.0*altura)/9.81);
+    double media = (notaPrimera+notaSegunda+notaTercera)/3;
     
-    System.out.printf("El objeto tardara en caer %.4f segundos desde una altura de %.2f", 
-    tiempo, altura);
+    System.out.printf("La media de las notas %.2f, %.2f, %.2f es de %.4f\n", 
+    notaPrimera, notaSegunda, notaTercera, media);
     
   }  
 }
