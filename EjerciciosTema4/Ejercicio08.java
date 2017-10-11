@@ -1,14 +1,15 @@
 /*
- * Solución Ejercicio 7 Tema 4
+ * Solución Ejercicio 8 Tema 4
  * 
- * Realiza un programa que calcule la media de tres notas.
+ * Amplía el programa anterior para que diga la nota del boletín (insuficiente,
+suficiente, bien, notable o sobresaliente).
  * 
  * @author Guillermo García
  */
 
 import java.util.Scanner;
 
-public class Ejercicio07 {
+public class Ejercicio08 {
   public static void main (String[] args){
     
     Scanner s = new Scanner(System.in);
@@ -18,6 +19,7 @@ public class Ejercicio07 {
     double notaPrimera = s.nextDouble();
     double notaSegunda = s.nextDouble();
     double notaTercera = s.nextDouble();
+    String notaBoletin = "";
         
     if (notaPrimera < 0) {
       System.out.print("No se permite una nota negativa, vuelva a introducir la"+
@@ -34,8 +36,20 @@ public class Ejercicio07 {
     }
     double media = (notaPrimera+notaSegunda+notaTercera)/3;
     
-    System.out.printf("La media de las notas %.2f, %.2f, %.2f es de %.4f\n", 
-    notaPrimera, notaSegunda, notaTercera, media);
+    if (media<5) {
+      notaBoletin = "¡Insuficiente!";
+    } else if ((media>=5) && (media<6)){
+      notaBoletin = "¡Suficiente!";
+    } else if ((media>=6) && (media<7.5)){
+      notaBoletin = "¡Bien!";
+    } else if ((media>=7.5) && (media<9)){
+      notaBoletin = "¡Notable!";
+    } else if ((media>=9) && (media<10)){
+      notaBoletin = "¡Sobresaliente!";
+    }
+    System.out.printf("La media de las notas %.2f, %.2f, %.2f es de %.4f.\n"+
+    "En el boletin tendrá una nota de %s.\n", notaPrimera, notaSegunda,
+    notaTercera, media, notaBoletin);
     
   }  
 }
