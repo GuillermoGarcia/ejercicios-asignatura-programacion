@@ -22,7 +22,7 @@ public class Ejercicio05 {
     if (valorA == 0){
       System.out.print("Si el valor de A es 0 la ecuación no se puede resolver." +
       "Por favor, vuelva a introducir el valor de a: ");
-      valorA = s.nextInt();
+      valorA = s.nextDouble();
     }    
     
     System.out.printf("El valor de x en la ecuación %.4fx+%.4f=0 es x=%.4f. \n", valorA,
