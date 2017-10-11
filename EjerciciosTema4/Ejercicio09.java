@@ -7,6 +7,7 @@
  * @author Guillermo García
  */
 
+import java.lang.Double;
 import java.util.Scanner;
 
 public class Ejercicio09 {
@@ -26,12 +27,16 @@ public class Ejercicio09 {
       valorA = s.nextDouble();
     }    
     
-    double resultadoRaizCuadrada = Math.sqrt((valorB*valorB)-4*valorA*valorB)/(2*valorA);
-    double resultadoSuma = resultadoRaizCuadrada-valorB;
-    double resultadoResta = 0-resultadoRaizCuadrada-valorB;
+    double resultadoRaizCuadrada = Math.sqrt((valorB*valorB)-4.0*valorA*valorC);
     
-    System.out.printf("El valor de x en la ecuación de segundo grado "+
-    "%.4fx²+%.4fx+%..4f=0 es x=%.4f y x=%.4f. \n", valorA, valorB, valorC,
-    resultadoSuma, resultadoResta);
+    if (Double.isNaN(resultadoRaizCuadrada)){
+      System.out.println("No es posible resolver la ecuación con los valores facilitados.");
+    } else {
+      double resultadoSuma = (resultadoRaizCuadrada-valorB)/(2.0*valorA);
+      double resultadoResta = (0.0-resultadoRaizCuadrada-valorB)/(2.0*valorA);
+      System.out.printf("El valor de x en la ecuación de segundo grado "+
+      "%.4fx²+%.4fx+%.4f=0 es x=%.4f y x=%.4f. \n", valorA, valorB, valorC,
+      resultadoSuma, resultadoResta);
+    }
   }
 }
