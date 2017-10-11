@@ -7,7 +7,6 @@
  * @author Guillermo García
  */
 
-import java.lang.Double;
 import java.util.Scanner;
 
 public class Ejercicio10 {
