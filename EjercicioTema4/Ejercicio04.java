@@ -1,5 +1,5 @@
 /*
- * Solución Ejercicio 3 Tema 4
+ * Solución Ejercicio 4 Tema 4
  * 
  * Vamos a ampliar uno de los ejercicios de la relación anterior para considerar
  * las horas extras. Escribe un programa que calcule el salario semanal de un
@@ -17,30 +17,24 @@ public class Ejercicio04 {
     
     Scanner s = new Scanner(System.in);
     
-    System.out.print("Introduzca un número del 1 al 7 para saber que día de la semana es: ");
-    int numeroDia = s.nextInt();
-    String dia = "";
-    
-    if (numeroDia>7){
-      System.out.print("La semana solo tiene 7 días así que un número entre 1 al 7, última posibilidad: ");
-      numeroDia = s.nextInt();
-    }else if (numeroDia<1) {
-      System.out.print("¿En serio un número negativo? Solo se acepta un número entre 1 al 7, última posibilidad: ");
-      numeroDia = s.nextInt();
+    System.out.print("Introduzca el número de horas trabajadas(Entero) esta semana: ");
+    int horasTrabajadas = s.nextInt();
+    int salario = 0;
+        
+    if (horasTrabajadas<0){
+      System.out.print("¿De verdad un número negativo? ¿Le debes dinero a la " +
+      "empresa? Por favor, introduce el número de horas trabajadas esta semana: ");
+      horasTrabajadas = s.nextInt();
     }    
-       
-    switch(numeroDia){
-      case 1: dia = "El primer día es Lunes"; break;
-      case 2: dia = "El segundo día es Martes";  break;
-      case 3: dia = "El tercer día es Miercoles";  break;
-      case 4: dia = "El cuarto día es Jueves";  break;
-      case 5: dia = "El quinto día es Viernes";  break;
-      case 6: dia = "El sexto día es Sabado";  break;
-      case 7: dia = "El septimo día es Domingo y dios descansó.";  break;
-      default: dia = "La semana tiene 7 días.";
-    }
     
-    System.out.println(dia);
+    if (horasTrabajadas>40) {
+      salario = (40 * 12) + ((horasTrabajadas-40)*16);
+    } else {
+      salario = horasTrabajadas * 12;
+    }
+      
+    System.out.printf("Esta semana has trabajado %d horas y has ganado %d €.\n",
+    horasTrabajadas,salario);
     
   }  
 }
