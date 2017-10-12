@@ -16,23 +16,22 @@ public class Ejercicio22 {
 
     Scanner s = new Scanner(System.in);
 
-    System.out.print("Introduzca la nota del primero Examen: ");
-    int primerExamen = s.nextInt();
+    System.out.print("¿Qué día de la semana es? ");
+    String dia = s.next();
 
-    System.out.print("Introduzca la nota del segundo Examen: ");
-    int segundoExamen = s.nextInt();
-    double media = (double)(primerExamen+segundoExamen)/2.0;
+    System.out.print("¿Qué hora es? ");
+    String horas = s.next();
+    int hora = Integer.parseInt(horas.substring(0,2));
+    int minutos = Integer.parseInt(horas.substring(3,5));
 
-    if (media<5){
-      System.out.println("¿Que calificación se ha obtenido en el Examen de Recuperación?");
-      System.out.println("1) Apto.");
-      System.out.println("2) No Apto.");
-      System.out.print("Calificación: ");
-      int apto = s.nextInt();
-      if (apto == 1){
-        media = 5.0;
-      }
+    int minutosFaltantes = 930 - (hora*60) - minutos;
+
+    switch(dia.toUpperCase()){
+      case "LUNES": minutosFaltantes += 5760; break;
+      case "MARTES": minutosFaltantes += 4320; break;
+      case "MIERCOLES": minutosFaltantes += 2880; break;
+      case "JUEVES": minutosFaltantes += 1440; break;
     }
-    System.out.printf("La calificación media del alumno es de %.2f.\n",media);
+    System.out.printf("Hasta el Viernes a las 15:30 faltan %d minutos.\n",minutosFaltantes);
   }
 }
