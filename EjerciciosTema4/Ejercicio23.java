@@ -18,6 +18,7 @@ public class Ejercicio23 {
   public static void main (String[] args){
 
     Scanner s = new Scanner(System.in);
+    String porc = "%";
 
     System.out.print("Introduzca la base Imponible: ");
     double baseImponible = s.nextDouble();
@@ -28,28 +29,29 @@ public class Ejercicio23 {
     System.out.print("Introduzca el código promocial a aplicar (nopro, mitad, menos5 o 5porc): ");
     String promo = s.next();
 
-    System.out.printf("Base Imponible         %9.2f\n",baseImponible);
+    System.out.printf("Base Imponible          %9.2f\n",baseImponible);
 
     switch(ivaAplicable.toUpperCase()){
-      case "REDUCIDO": System.out.printf("IVA 10%        %9.2f\n", baseImponible*0.1);
+      case "REDUCIDO": System.out.printf("IVA (10%s)               %9.2f\n", porc, (baseImponible*0.1));
                        total = baseImponible*1.1; break;
-      case "SUPERREDUCIDO": System.out.printf("IVA (4%)          %9.2f\n", baseImponible*0.04);
+      case "SUPERREDUCIDO": System.out.printf("IVA (4%s)                %9.2f\n", porc, baseImponible*0.04);
                             total = baseImponible*1.04; break;
-      default: System.out.printf("IVA (21%)         %9.2f\n", baseImponible*0.21);
+      default: System.out.printf("IVA (21%s)               %9.2f\n", porc, baseImponible*0.21);
                        total = baseImponible*1.21; break;
     }
 
-    System.out.printf("Precio con IVA         %9.2f\n",total);
+    System.out.printf("Precio con IVA          %9.2f\n",total);
 
     switch(promo.toUpperCase()){
-      case "MITAD": System.out.printf("Cód. Promo (mitad)     -%9.2f\n",total/2);
-                    total=total/2; break;
-      case "MENOS5": System.out.println("Cód. Promo (menos5)     -5.00");
+      case "MITAD": System.out.printf("Cód. Promo (mitad)      %9.2f\n",-(total/2));
+                    total = total/2; break;
+      case "MENOS5": System.out.println("Cód. Promo (menos5)         -5.00");
                      total=total-5; break;
-      case "5PORC": System.out.printf("Cód. Promo (5porc)     -%9.2f\n",total*0.05);
-                     total=total*0.95; break;
-      default: System.out.println("Cód. Promo (nopro)     -0.00");
+      case "5PORC": double prom = (double)(Math.round((total - (total*0.95))*100d))/100d;
+                    System.out.printf("Cód. Promo (5porc)      %9.2f\n",prom);
+                    total = total - prom; break;
+      default: System.out.println("Cód. Promo (nopro)          -0.00");
     }
-    System.out.printf("TOTAL                  -%9.2f\n",total);
+    System.out.printf("TOTAL                   %9.2f\n",total);
   }
 }
