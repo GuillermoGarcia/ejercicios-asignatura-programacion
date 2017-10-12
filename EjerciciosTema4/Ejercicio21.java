@@ -19,10 +19,10 @@ public class Ejercicio21 {
 
     Scanner s = new Scanner(System.in);
 
-    System.out.print("Introduzca la nota del primero Examen: ");
+    System.out.print("Introduzca la nota del primero Examen de Programación: ");
     int primerExamen = s.nextInt();
 
-    System.out.print("Introduzca la nota del segundo Examen: ");
+    System.out.print("Introduzca la nota del segundo Examen de Programación: ");
     int segundoExamen = s.nextInt();
     double media = (double)(primerExamen+segundoExamen)/2.0;
 
@@ -36,6 +36,7 @@ public class Ejercicio21 {
         media = 5.0;
       }
     }
-    System.out.printf("La calificación media del alumno es de %.2f.\n",media);
+    System.out.printf("La calificación media del alumno en la asignatura de Programación es de "
+    +"%.2f.\n",media);
   }
 }
