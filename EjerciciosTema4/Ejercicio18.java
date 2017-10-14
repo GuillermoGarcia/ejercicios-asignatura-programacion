@@ -1,7 +1,8 @@
 /*
  * Solución Ejercicio 18 Tema 4
  *
- * Escribe un programa que diga cuál es la última cifra de un número entero introducido por teclado.
+ * Escribe un programa que diga cuál es la primera cifra de un número entero introducido por
+ * teclado. Se permiten números de hasta 5 cifras.
  *
  * @author Guillermo García
  */
@@ -13,15 +14,24 @@ public class Ejercicio18 {
 
     Scanner s = new Scanner(System.in);
 
-    System.out.print("Introduzca un número entero: ");
+    System.out.print("Introduzca un número entero de máximo 5 cifras: ");
 
-    long numero = s.nextLong();
-    String ultimaCifra = Long.toString(numero);
-    ultimaCifra.substring(ultimaCifra.lenght()-1,1);
+    int numero = s.nextInt();
+    int primeraCifra = 0;
 
-    switch(Integer.parseInt(ultimaCifra)){
-      case 1: System.out.println(); break;
+    if (numero < 10){
+      primeraCifra = numero;
+    } else if (numero < 100) {
+      primeraCifra = numero / 10;
+    } else if (numero < 1000) {
+      primeraCifra = numero / 100;
+    } else if (numero < 10000) {
+      primeraCifra = numero / 1000;
+    } else {
+      primeraCifra = numero / 10000;
     }
+
+    System.out.printf("La primera cifra del número %d es %d.\n", numero, primeraCifra);
 
 
 

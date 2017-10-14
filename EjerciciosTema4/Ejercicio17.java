@@ -16,14 +16,9 @@ public class Ejercicio17 {
     System.out.print("Introduzca un número entero: ");
 
     long numero = s.nextLong();
-    String ultimaCifra = Long.toString(numero);
-    ultimaCifra.substring(ultimaCifra.lenght()-1,1);
+    long ultimaCifra = numero % 10;
 
-    switch(Integer.parseInt(ultimaCifra)){
-      case 1: System.out.println(); break;
-    }
-
-
+    System.out.printf("La última cifra del número %d es %d.\n", numero, ultimaCifra);
 
   }
 }
