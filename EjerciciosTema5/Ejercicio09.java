@@ -19,10 +19,10 @@ public class Ejercicio09 {
     int temp = numero;
     int digitos = 0;
     
-    do {
+    while (temp >= 0) {
       temp = temp / 10;
       digitos++;
-    }while (temp >= 0);
+    }
     
     System.out.printf("El número %d tiene %d dígitos.\n", numero, digitos);
   }
