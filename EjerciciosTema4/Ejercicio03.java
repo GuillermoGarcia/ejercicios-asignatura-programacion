@@ -27,12 +27,12 @@ public class Ejercicio03 {
     }    
        
     switch(numeroDia){
-      case 1: dia = "El primer día es Lunes"; break;
-      case 2: dia = "El segundo día es Martes";  break;
-      case 3: dia = "El tercer día es Miercoles";  break;
-      case 4: dia = "El cuarto día es Jueves";  break;
-      case 5: dia = "El quinto día es Viernes";  break;
-      case 6: dia = "El sexto día es Sabado";  break;
+      case 1: dia = "El primer día es Lunes."; break;
+      case 2: dia = "El segundo día es Martes.";  break;
+      case 3: dia = "El tercer día es Miércoles.";  break;
+      case 4: dia = "El cuarto día es Jueves.";  break;
+      case 5: dia = "El quinto día es Viernes.";  break;
+      case 6: dia = "El sexto día es Sabado.";  break;
       case 7: dia = "El septimo día es Domingo y dios descansó.";  break;
       default: dia = "La semana tiene 7 días.";
     }
