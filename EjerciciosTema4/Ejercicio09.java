@@ -29,7 +29,7 @@ public class Ejercicio09 {
     
     double resultadoRaizCuadrada = Math.sqrt((valorB*valorB)-4.0*valorA*valorC);
     
-    if (Double.isNaN(resultadoRaizCuadrada)){
+    if ((Double.isNaN(resultadoRaizCuadrada)) || valorA == 0)){
       System.out.println("No es posible resolver la ecuación con los valores facilitados.");
     } else {
       double resultadoSuma = (resultadoRaizCuadrada-valorB)/(2.0*valorA);
