@@ -36,15 +36,15 @@ public class Ejercicio08 {
     }
     double media = (notaPrimera+notaSegunda+notaTercera)/3;
     
-    if (media<5) {
+    if (media < 5) {
       notaBoletin = "¡Insuficiente!";
-    } else if ((media>=5) && (media<6)){
+    } else if (media < 6){
       notaBoletin = "¡Suficiente!";
-    } else if ((media>=6) && (media<7.5)){
+    } else if (media < 7){
       notaBoletin = "¡Bien!";
-    } else if ((media>=7.5) && (media<9)){
+    } else if (media < 9){
       notaBoletin = "¡Notable!";
-    } else if ((media>=9) && (media<10)){
+    } else {
       notaBoletin = "¡Sobresaliente!";
     }
     System.out.printf("La media de las notas %.2f, %.2f, %.2f es de %.4f.\n"+
