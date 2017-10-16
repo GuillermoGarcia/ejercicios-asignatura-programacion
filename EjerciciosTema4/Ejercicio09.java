@@ -29,8 +29,12 @@ public class Ejercicio09 {
     
     double resultadoRaizCuadrada = Math.sqrt((valorB*valorB)-4.0*valorA*valorC);
     
-    if ((Double.isNaN(resultadoRaizCuadrada)) || (valorA == 0)){
+    if (Double.isNaN(resultadoRaizCuadrada)){
       System.out.println("No es posible resolver la ecuación con los valores facilitados.");
+    } else if ((valorA == 0) && (valorB > 0)){
+      System.out.printf("El valor de x en la ecuación de segundo grado "+
+      "%.4fx²+%.4fx+%.4f=0 es x=%.4f.\n", valorA, valorB, valorC,
+      (valorC / valorB));
     } else {
       double resultadoSuma = (resultadoRaizCuadrada-valorB)/(2.0*valorA);
       double resultadoResta = (0.0-resultadoRaizCuadrada-valorB)/(2.0*valorA);
