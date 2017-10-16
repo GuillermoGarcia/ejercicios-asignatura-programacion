@@ -34,6 +34,7 @@ public class Ejercicio08 {
       "tercera nota: ");
       notaTercera = s.nextDouble();
     }
+    
     double media = (notaPrimera+notaSegunda+notaTercera)/3;
     
     if (media < 5) {
