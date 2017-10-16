@@ -23,11 +23,11 @@ public class Ejercicio01 {
     
     switch(dia){
       case "Lunes": asignatura = "Programación"; error = 0; break;
-      case "Martes": asignatura = "Sistemas Informaticos"; error = 0;  break;
+      case "Martes": asignatura = "Sistemas Informaticos"; error = 0; break;
       case "Miércoles": 
-      case "Miercoles": asignatura = "Programación"; error = 0;  break;
-      case "Jueves": asignatura = "Entornos de Datos"; error = 0;  break;
-      case "Viernes": asignatura = "Sistemas Informaticos"; error = 0;  break;
+      case "Miercoles": asignatura = "Programación"; error = 0; break;
+      case "Jueves": asignatura = "Entornos de Datos"; error = 0; break;
+      case "Viernes": asignatura = "Sistemas Informaticos"; error = 0; break;
       default: error = 1; asignatura = "Ha introducido algo que no es un día, o bien, un día no hábil.";
     }
     
