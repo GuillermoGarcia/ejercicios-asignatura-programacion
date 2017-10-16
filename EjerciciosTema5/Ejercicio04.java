@@ -1,7 +1,8 @@
 /*
  * Solución Ejercicio 4 Tema 5
  * 
- * Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle 'do-while'.
+ * Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás
+ * utilizando un bucle 'for'.
  *  
  * @author Guillermo García
  */
