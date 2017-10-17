@@ -29,6 +29,7 @@ public class Ejercicio22 {
     switch(dia.toUpperCase()){
       case "LUNES": minutosFaltantes += 5760; break;
       case "MARTES": minutosFaltantes += 4320; break;
+      case "MIÉRCOLES":  
       case "MIERCOLES": minutosFaltantes += 2880; break;
       case "JUEVES": minutosFaltantes += 1440; break;
     }
