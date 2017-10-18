@@ -16,7 +16,7 @@ public class Ejercicio08 {
     System.out.print("¿De que número quiere la tabla de multiplicar? ");
     int tabla = s.nextInt();
     
-    for (int i=1;i<=10;i++) {
+    for (int i=0;i<=10;i++) {
       System.out.printf("%2d x %2d = %2d\n", tabla, i, (tabla*i));
     }
     
