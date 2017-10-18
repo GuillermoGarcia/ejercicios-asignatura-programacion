@@ -19,7 +19,7 @@ public class Ejercicio11 {
     int inicio = s.nextInt();
     
     for (int i = inicio;i <= (inicio + 5);i++) {
-      System.out.printf("%9d%9d%9d\n", i, i*i, i*i*i);           
+      System.out.printf("%9d%9d%9d\n", i, i*i, i*i*i);          
     }
   }
 }
