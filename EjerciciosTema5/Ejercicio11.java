@@ -18,7 +18,7 @@ public class Ejercicio11 {
     System.out.print("Introduzca el número por el que vamos a comenzar: ");
     int inicio = s.nextInt();
     
-    for (int i = inicio;i <= (inicio + 5);i++) {
+    for (int i = inicio;i < (inicio + 5);i++) {
       System.out.printf("%9d%9d%9d\n", i, i*i, i*i*i);          
     }
   }
