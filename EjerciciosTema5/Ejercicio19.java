@@ -14,32 +14,37 @@ public class Ejercicio19 {
     
     Scanner s = new Scanner(System.in);
 
-    int n1 = 0;
-    int n2 = 0;
+    int altura = 0;
+    int base = 0;
+    String c = "";
 
     do {
-      System.out.print("Por favor, introduzca dos número enteros positivos y distintos: ");
-      n1 = s.nextInt();
-      n2 = s.nextInt();
-    } while (n1 == n2);
+      System.out.print("¿De que altura desea la pirámide?: ");
+      altura = s.nextInt();
+    } while (altura <= 0);
 
-    if (n1 > n2) {
-      int temp = n1;
-      n1 = n2;
-      n2 = temp;
-    }
-
-    System.out.printf("Los numeros comprendidos entre el %d y el %d, con salto de 7, son", n1, n2);
+    System.out.print("¿Con que caracter desea rellenar la pirámide?: ");
+    c = s.next();
     
-    for (int i = n1; i <= n2 ; i += 7 ) {
-      if (i == n1){
-        System.out.printf(" %s", i);
+    base = altura-1;
+    base = (base*2);
+
+    for (int i = 1; i <= altura; i++) {
+      if(i == 1){
+        for (int j=1; j <= (base/2); j++){
+          System.out.print(" ");
+        }
+        System.out.print(c);
       } else {
-        System.out.printf(", %s", i);
+        int temp = (i*2)+1;
+        for (int j=1; j <= (temp/2); j++ ){
+          System.out.print(" ");
+        }          
+        for (int j=1; j <= temp; j++ ){
+          System.out.print(c);
+        }
       }
+      System.out.println();
     }
-
-    System.out.println(".");
-
   }
 }
