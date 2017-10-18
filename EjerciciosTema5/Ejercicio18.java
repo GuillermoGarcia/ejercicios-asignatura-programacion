@@ -35,7 +35,7 @@ public class Ejercicio18 {
     for (int i = n1; i <= n2 ; i += 7 ) {
       if (i == n1){
         System.out.printf(" %s", i);
-      } else { 
+      } else {
         System.out.printf(", %s", i);
       }
     }
