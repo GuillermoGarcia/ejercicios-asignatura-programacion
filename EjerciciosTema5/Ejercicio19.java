@@ -1,17 +1,17 @@
 /*
  * Solución Ejercicio 19 Tema 5
- * 
+ *
  * Realiza un programa que pinte una pirámide por pantalla. La altura se debe pedir por teclado. El
  * carácter con el que se pinta la pirámide también se debe pedir por teclado.
- *  
+ *
  * @author Guillermo García
  */
- 
+
 import java.util.Scanner;
 
 public class Ejercicio19 {
   public static void main (String[] args){
-    
+
     Scanner s = new Scanner(System.in);
 
     int altura = 0;
@@ -25,22 +25,27 @@ public class Ejercicio19 {
 
     System.out.print("¿Con que caracter desea rellenar la pirámide?: ");
     c = s.next();
-    
-    base = altura-1;
-    base = (base*2);
+
+
+    base = (altura*2)-1;
 
     for (int i = 1; i <= altura; i++) {
+      System.out.print(i+" ");
       if(i == 1){
-        for (int j=1; j <= (base/2); j++){
+        for (int j=1; j <= (altura-1); j++){
           System.out.print(" ");
         }
         System.out.print(c);
+      } else if (i == altura){
+        for (int j = 1; j <= base; j++ ){
+          System.out.print(c);
+        }
       } else {
-        int temp = (i*2)+1;
-        for (int j=1; j <= (temp/2); j++ ){
+        int temp = (i*2)-1;
+        for (int j = 1; j <= ((base-temp)/2); j++ ){
           System.out.print(" ");
-        }          
-        for (int j=1; j <= temp; j++ ){
+        }
+        for (int j = 1; j <= temp; j++ ){
           System.out.print(c);
         }
       }
