@@ -25,15 +25,15 @@ public class Ejercicio22 {
       }
       if (esPrimo) {
         if (i == 2) {
-          System.out.print(i);
+          System.out.print("\033[100m" + i);
         } else {
-          System.out.print(", " + i);
+          System.out.print("\033[0m, \033[100m" + i);
         }
       }
 
     }
 
-    System.out.println(".");
+    System.out.println("\033[0m.");
 
   }
 }
