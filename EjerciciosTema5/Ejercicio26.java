@@ -1,17 +1,20 @@
 /*
- * Solución Ejercicio 25 Tema 5
+ * Solución Ejercicio 26 Tema 5
  *
- * Realiza un programa que pida un número por teclado y que luego muestre ese número al revés.
+ * Realiza un programa que pida primero un número y a continuación un dígito. El programa nos debe
+ * dar la posición (o posiciones) contando de izquierda a derecha que ocupa ese dígito en el número
+ * introducido.
  *
  * @author Guillermo García
  */
 
 import java.util.Scanner;
 
-public class Ejercicio25 {
+public class Ejercicio26 {
   public static void main (String[] args){
 
     Scanner s = new Scanner(System.in);
+    String bl = "\033[1;5;7;100m%\033[0m ";
 
     System.out.print("\033[1mIntroduzca un número: \033[0m");
 
