@@ -34,15 +34,20 @@ public class Ejercicio32 {
       numero = numero / 10;
     }
 
-    for (int i = pares; i >= 1; i--){
-      System.out.print((temp % 10));
-      temp = temp / 10;
-      if (i == 2){
-        System.out.print(" y ");
-      } else if (i != 1) {
-        System.out.print(", ");
+    if (pares == 0) {
+      System.out.print("Ninguno.");
+    } else {
+      for (int i = pares; i >= 1; i--){
+        System.out.print((temp % 10));
+        temp = temp / 10;
+        if (i == 2){
+          System.out.print(" y ");
+        } else if (i != 1) {
+          System.out.print(", ");
+        }
       }
     }
+    
     System.out.println("\nLa suma de los dígitos pares es \033[4m" + sumaPares + "\033[0m.");
 
   }
