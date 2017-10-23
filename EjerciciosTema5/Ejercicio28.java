@@ -13,10 +13,13 @@ public class Ejercicio28 {
 
     Scanner s = new Scanner(System.in);
 
-    System.out.print("\033[1mPor favor, Introduzca un número entero positivo: \033[0m");
+    long factorial = 1;
+    int numero = 0;
 
-    int numero = s.nextInt();
-    int factorial = 1;
+    do {
+      System.out.print("\033[1mPor favor, Introduzca un número entero positivo: \033[0m");
+      numero = s.nextInt();
+    } while (numero < 1);
 
     for (int i = numero; i > 1; i--) {
       factorial *= i;
