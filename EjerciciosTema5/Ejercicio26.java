@@ -23,6 +23,7 @@ public class Ejercicio26 {
     int longitud = 0;
     int posicion = 1;
     int veces = 0;
+    boolean unicaVez = false;
 
     System.out.print("\033[1mIntroduzca el dígito a buscar: \033[0m");
     int digito = s.nextInt();
@@ -43,10 +44,16 @@ public class Ejercicio26 {
         System.out.print(" aparece en la posición ");
       } else {
         System.out.print(" aparece en las posiciones ");
+        unicaVez = false;
       }
       while (temp > 0) {
-        if ((digito == (temp % 10)) && (veces > 0)){
+        if ((digito == (temp % 10)) && (veces >= 1)){
           System.out.print(posicion);
+          if ((veces == 1) && (!unicaVez)) {
+            System.out.print(" y ");
+          } else if (veces > 1) {
+              System.out.print(", ");
+          }
           veces--;
         } else {
           temp = temp / 10;
