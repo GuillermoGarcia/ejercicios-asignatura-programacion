@@ -2,7 +2,7 @@
 
 rm $0
 
-java "Ejercicio35"
+java "Ejercicio36"
 
 echo "
 
