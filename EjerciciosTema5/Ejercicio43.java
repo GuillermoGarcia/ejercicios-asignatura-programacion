@@ -19,6 +19,7 @@ public class Ejercicio43 {
     Scanner s = new Scanner(System.in);
     long numero = 0;
     long temp = 0;
+    int longitud = 0;
     
     do {
       System.out.print("\033[1mPor favor, Introduzca un número entero positivo:\033[0m ");
@@ -34,14 +35,23 @@ public class Ejercicio43 {
     do {
       temp = (temp * 10) + (numero % 10);
       numero = numero / 10;
+      longitud++;
     } while (numero > 0);
 
     for (int i = 1; i < posicion; i++) {
       numero = (numero * 10) + (temp % 10);
       temp = temp / 10;
     }
-    
-    System.out.println(numero + "\033[0m y \033[4m" + temp + "\033[0m.");
+
+    System.out.print(numero + "\033[0m y \033[4m");
+    numero = 0;
+
+    for (int i = 1; i <= (longitud-posicion+1); i++) {
+      numero = (numero * 10) + (temp % 10);
+      temp = temp / 10;
+    }
+
+    System.out.println(numero + "\033[0m.");
     
   }
 }
