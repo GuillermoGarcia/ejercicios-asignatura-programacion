@@ -20,7 +20,7 @@ public class Ejercicio21 {
     int entrada = 0;
     double mediaImpares = 0;
     int cantidadImpares = 0;
-    int mayorPar = 0;
+    int mayorPar = Integer.MIN_VALUE;
 
     System.out.println("Introduzca cuantos números positivos desee, para finalizar introduzca un"+
     "número negativo.");
