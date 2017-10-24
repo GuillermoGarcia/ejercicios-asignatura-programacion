@@ -21,7 +21,7 @@ public class Ejercicio42 {
       numero = s.nextInt();
     } while (numero < 0);
 
-    for (int i = numero; i <= (numero+5); i++) {
+    for (int i = numero; i < (numero+5); i++) {
       int divisor = 2;
       boolean esPrimo = true;
       while ((esPrimo) && (divisor < i)) {
