@@ -13,9 +13,13 @@ public class Ejercicio41 {
   public static void main (String[] args){
 
     Scanner s = new Scanner(System.in);
+    long numero = 0;
 
-    System.out.print("\033[1mPor favor, Introduzca un número entero positivo:\033[0m ");
-    long numero = s.nextLong();
+    do {
+      System.out.print("\033[1mPor favor, Introduzca un número entero positivo:\033[0m ");
+      numero = s.nextLong();
+    } while (numero < 0);
+
     int pares = 0;
     int impares = 0;
 
