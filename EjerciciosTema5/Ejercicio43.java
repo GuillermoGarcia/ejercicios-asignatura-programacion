@@ -46,7 +46,7 @@ public class Ejercicio43 {
     System.out.print(numero + "\033[0m y \033[4m");
     numero = 0;
 
-    for (int i = 1; i <= (longitud-posicion+1); i++) {
+    for (int i = 1; i <= (longitud - posicion + 1); i++) {
       numero = (numero * 10) + (temp % 10);
       temp = temp / 10;
     }
