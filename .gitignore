@@ -5,3 +5,7 @@
 # Copias de Seguridad
 
 *.bak
+
+# Geany sh
+
+*.sh
