@@ -1,9 +1,11 @@
 /*
- * Solución Ejercicio 1 Examen Trimestre 1 Control 1 Modelo A Año 2014
+ * Solución Ejercicio 2 Examen Trimestre 1 Control 1 Modelo A Año 2014
  *
- * Escribe un programa que mezcle los dígitos de dos números de la misma longitud que se introducen
- * por teclado. Se debe comprobar que los dos números efectivamente tienen la misma longitud. Se
- * recomienda usar long en lugar de int ya que el primero admite números más largos.
+ * Escribe un programa que pida un número entero positivo y que diga a continuación si las cifras
+ * que lo componen están ordenadas de menor a mayor, mirando de izquierda a derecha. Se podrán
+ * introducir números de cualquier longitud mientras lo permitan las variables. Usa long en lugar
+ * de int donde sea necesario para admitir números largos. Fíjate bien que no se pide ordenar las
+ * cifras, solo saber si están ordenadas o no.
  *
  *
  * @author Guillermo García
