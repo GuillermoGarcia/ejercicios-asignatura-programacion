@@ -15,12 +15,7 @@ public class Ejercicio21 {
   public static void main (String[] args){
 
     
-    Scanner s = new Scanner(System.in);
-
-    int maximoPar = Integer.MIN_VALUE; // Inicializamos al valor mas pequeño de Integer
-    int minimoImpar = Integer.MAX_VALUE; // Inicializamos al valor mas grande de Integer
-    int suma = 0; // Inicializamos la variable a 0
-
+    //Scanner s = new Scanner(System.in);
 
     System.out.println("Vamos a lanzar 5 monedas al aire veamos si sale cara o cruz: ");
 
@@ -35,8 +30,8 @@ public class Ejercicio21 {
       }
 
       switch ((int)(Math.random() * 2)){
-        case 1: System.out.println("cara"); break;
-        default: System.out.println("cruz");
+        case 1: System.out.println("cara"); break; // Sale Cara
+        default: System.out.println("cruz"); // Sale Cruz
       }
 
     }
