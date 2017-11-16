@@ -1,9 +1,9 @@
 /*
  * Solución Ejercicio 1 Tema 7
  * 
- * Define un num de 10 caracteres con nombre simbolo y asigna valores a los elementos según la
- * tabla que se muestra a continuación. Muestra el contenido de todos los elementos del num. ¿Qué
- * sucede con los valores de los elementos que no han sido inicializados?
+ * Define un num de 12 números enteros con nombre num y asigna los valores según la tabla que se
+ * muestra a continuación. Muestra el contenido de todos los elementos del num. ¿Qué sucede con
+ * los valores de los elementos que no han sido inicializados?
  *  
  * @author Guillermo García
  */
