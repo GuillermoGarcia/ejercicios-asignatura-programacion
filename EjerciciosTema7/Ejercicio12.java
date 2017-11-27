@@ -86,12 +86,19 @@ public class Ejercicio12 {
       }
     } while (((posFinal < 0) || (posFinal > 9)) || (posFinal < posInicial));
 
+    int[] temp = new int[numeros.length];
     int valor = numeros[posInicial];
-
-    for (int i = posInicial; i < posFinal; i++){
-      numeros[i] = numeros[i + 1];
+    for (int i = 0; i <= (temp.length - 1); i++){
+      if (i == posFinal) { temp[i] = valor; }
+      else if ((i > posInicial) && (i < posFinal)) { temp[i] = numeros[i]; }
+      else {
+        if (i == 0) { temp[i] = numeros[numeros.length - 1]; }
+        else { temp[i] = numeros[i - 1]; }
+      } 
+      
     }
-    numeros[posFinal] = valor;
+
+    numeros = temp;
 
     System.out.println("\nTras mover el valor de la posición " + posInicial + " a la posición " +
     posFinal + " la tabla queda así: ");
