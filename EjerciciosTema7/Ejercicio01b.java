@@ -30,14 +30,14 @@ public class Ejercicio01b {
     System.out.println("Array num   Columna0   Columna1   Columna2   Columna3   Columna4   Columna5");
     System.out.println("          ┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐");
     for (int i = 0; i <= (filas - 1); i++){ // Pintamos las filas
-      System.out.print("  Fila " + i + "  |");
+      System.out.print("  Fila " + i + "  │");
       for (int j = 0; j <= (columnas - 1); j++){  // Pintamos las columnas
         int esp = 10 - Integer.toString(num[i][j]).length();
         int mitad = (esp / 2) + (esp % 2);
         for (int k = 1; k <= mitad ; k++){ System.out.print(" "); }
         System.out.print(num[i][j]);
         for (int k = 1; k <= (esp - mitad) ; k++){ System.out.print(" "); }
-        System.out.print("|");
+        System.out.print("│");
       }
       System.out.println();
       if (i < (filas - 1)){
