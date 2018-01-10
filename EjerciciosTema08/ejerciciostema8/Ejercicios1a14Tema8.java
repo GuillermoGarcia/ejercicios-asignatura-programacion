@@ -63,16 +63,12 @@ public class Ejercicios1a14Tema8 {
   
   public static int potencia(int b, int e){
 
-  if (e == 0) {
-    return 1;
-  } else {
-    int total = b;
-    for (int i = 2; i <= e; i++){
+    int total = 1;
+    for (int i = 1; i <= e; i++){
       total *= b;
     }
     return (int)total;
-  }
-   
+
  }
   
   /**
@@ -171,9 +167,7 @@ public class Ejercicios1a14Tema8 {
    */
   
   public static int quitaPorDetras(int x, int n){
-
-    return voltea(voltea(x) / potencia(10,n));
-
+    return voltea(quitaPorDelante(voltea(x),n);
   }
   
   /**
@@ -185,9 +179,7 @@ public class Ejercicios1a14Tema8 {
    */
 
   public static int quitaPorDelante(int x, int n){
-
     return (x / potencia(10,n));
-
   }
 
   /**
@@ -199,10 +191,10 @@ public class Ejercicios1a14Tema8 {
    */
 
   public static int pegaPorDetras(int x, int d){
-    
+
     int longitud = digitos(x);
     return (d * potencia(10,longitud)) + x ;
-    
+
   }
   
   /**
