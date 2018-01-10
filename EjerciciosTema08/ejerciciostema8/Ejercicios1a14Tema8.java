@@ -82,7 +82,7 @@ public class Ejercicios1a14Tema8 {
    * @return <b>int</b>, longitud o cantidad de digitos del número 'x'
    */
   
-  public static int digitos (int x){
+  public static int digitos (long x){
     
     int longitud = 0;
     do{
@@ -90,6 +90,11 @@ public class Ejercicios1a14Tema8 {
       longitud++;
     } while (x > 0);
     return longitud;
+
+  }
+
+  public static int digitos (int x){
+    return digitos((long)x);
   }
   
   /**
@@ -120,7 +125,7 @@ public class Ejercicios1a14Tema8 {
    * @return <b>int</b>, digito, número entero, que está en la posición 'n' del número 'x'
    */
   
-  public static int digitoN (int x, int n){
+  public static int digitoN (long x, int n){
 
     if (n > digitos(x)) {
       return -1;
@@ -128,9 +133,13 @@ public class Ejercicios1a14Tema8 {
       for (int i = 0; i < digitos(x) - n + 1; i++){
         x /= 10;
       }
-      return x % 10;
+      return (int)(x % 10);
     }
 
+  }
+
+  public static int digitoN (int x, int n){
+    return digitoN((long)x,n);
   }
 
   /**
