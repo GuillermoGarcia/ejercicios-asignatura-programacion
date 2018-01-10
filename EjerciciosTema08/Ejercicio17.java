@@ -11,20 +11,20 @@ public class Ejercicio17 {
   
   public static void main (String[] args) {
 
-    int numero = 454457;
+    long numero = 1100111001;
 
-    System.out.println("El numero " + numero + " en binario es " + DecimalABinario(numero) + ".\n");
+    System.out.println("El numero binario " + numero + " en decimal es " + BinarioADecimal(numero) + ".\n");
 
   }
 
-  public static long DecimalABinario(int numero){
+  public static long BinarioADecimal(long numero){
 
-    long binario = 0;
-    while (numero > 2) {
-      binario = ((long)numero % 2) + (binario * 10);
-      numero /= 2;
+    int longitud = Ejercicios1a14Tema8.digitos(numero) - 1;
+    int decimal = 0;
+    for (int i = 0; i <= longitud; i++) {
+      decimal += (Ejercicios1a14Tema8.digitoN(numero,longitud - i) * Ejercicios1a14Tema8.potencia(2,i));
     }
-    return Ejercicios1a14Tema8.voltea((binario * 10) + numero);
+    return decimal;
   }
 }
 
