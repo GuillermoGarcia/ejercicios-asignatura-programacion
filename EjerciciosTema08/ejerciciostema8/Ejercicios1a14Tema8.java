@@ -167,7 +167,7 @@ public class Ejercicios1a14Tema8 {
    */
   
   public static int quitaPorDetras(int x, int n){
-    return voltea(quitaPorDelante(voltea(x),n);
+    return voltea(quitaPorDelante(voltea(x),n));
   }
   
   /**
