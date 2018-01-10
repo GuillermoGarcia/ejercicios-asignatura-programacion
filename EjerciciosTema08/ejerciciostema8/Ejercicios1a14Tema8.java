@@ -100,16 +100,20 @@ public class Ejercicios1a14Tema8 {
    * @return <b>int</b>, número entero volteado
    */
   
-  public static int voltea (int x) {
-    
+  public static long voltea (long x) {
+
     int longitud = digitos(x) - 1;
-    int volteado = 0;
+    long volteado = 0;
     
-    for (int i = 0; i <= longitud; i++){
+    for (int i = longitud; i >= 0; i--){
       volteado = (volteado*10) + digitoN(x,i);
     }
     return volteado;
-    
+
+  }
+
+  public static int voltea (int x) {
+    return (int)voltea((long)x);
   }
   
   /**
@@ -126,7 +130,8 @@ public class Ejercicios1a14Tema8 {
     if (n > digitos(x)) {
       return -1;
     } else {
-      for (int i = 0; i < digitos(x) - n + 1; i++){
+      int fin = digitos(x) - n - 1;
+      for (int i = 0; i < fin; i++){
         x /= 10;
       }
       return (int)(x % 10);
@@ -146,7 +151,7 @@ public class Ejercicios1a14Tema8 {
    * @return <b>int</b>, número entero, posición del digito 'd' dentro del número 'x'
    */
 
-  public static int posicionDeDigito (int x, int d){
+  public static int posicionDeDigito (long x, int d){
 
     if (d > digitos(x)) {
       return -1;
@@ -157,7 +162,12 @@ public class Ejercicios1a14Tema8 {
         }
       }
     }
+    return -1;
 
+  }
+
+  public static int posicionDeDigito (int x, int d){
+    return posicionDeDigito((long)x,d);
   }
 
   /**
@@ -169,7 +179,7 @@ public class Ejercicios1a14Tema8 {
    */
   
   public static int quitaPorDetras(int x, int n){
-    return voltea(quitaPorDelante(voltea(x),n));
+    return (x / potencia(10,n));
   }
   
   /**
@@ -181,7 +191,7 @@ public class Ejercicios1a14Tema8 {
    */
 
   public static int quitaPorDelante(int x, int n){
-    return (x / potencia(10,n));
+    return voltea(quitaPorDetras(voltea(x),n));
   }
 
   /**
@@ -194,8 +204,7 @@ public class Ejercicios1a14Tema8 {
 
   public static int pegaPorDetras(int x, int d){
 
-    int longitud = digitos(x);
-    return (d * potencia(10,longitud)) + x ;
+    return (x * 10) + d;
 
   }
   
@@ -208,9 +217,10 @@ public class Ejercicios1a14Tema8 {
    */
   
   public static int pegaPorDelante(int x, int d){
-    
-    return (x * 10) + d;
-    
+
+    int longitud = digitos(x);
+    return (d * potencia(10,longitud)) + x ;
+
   }
   
   /**
@@ -228,7 +238,7 @@ public class Ejercicios1a14Tema8 {
 
     if (pf >= digitos(x)) pf = digitos(x) - 1;
     for (int i = pf; i >= pi; i--){
-      trozo = (trozo * 10) + digitoN(x,i);
+      trozo = pegaPorDetras(trozo, digitoN(x,i));
     }
     return trozo;
     
@@ -242,10 +252,8 @@ public class Ejercicios1a14Tema8 {
    * @return <b>int</b>, número entero obtenido tras concatenar 'x con 'y'
    */
   
-  public static int juntaNumeros(int x, int y){
-    
-    return (x * potencia(10,digitos(y))) + y;
-
+  public static long juntaNumeros(int x, int y){
+    return ((long)x * potencia(10,digitos(y))) + y;
   }
   
 }
