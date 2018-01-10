@@ -112,7 +112,8 @@ public class Ejercicios1a14Tema8 {
   }
   
   /**
-   * Devuelve el digito que está en la posición 'n' del número 'x'
+   * Devuelve el dígito que está en la posición n de un número entero. Se empieza contando por el 0
+   * y de izquierda a derecha. Si la posición está fuera del rango devuelve -1.
    * 
    * @param x, número entero
    * @param n, número entero, posición buscada
@@ -120,15 +121,16 @@ public class Ejercicios1a14Tema8 {
    */
   
   public static int digitoN (int x, int n){
-    
-    int digito = x % 10;
-    
-    for (int i = 0; i < n; i++){
-      x /= 10;
-      digito = x % 10;
+
+    if (n > digitos(x)) {
+      return -1;
+    } else {
+      for (int i = 0; i < digitos(x) - n + 1; i++){
+        x /= 10;
+      }
+      return x % 10;
     }
-    return digito;
-    
+
   }
 
   /**
