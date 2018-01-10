@@ -147,15 +147,17 @@ public class Ejercicios1a14Tema8 {
    */
 
   public static int posicionDeDigito (int x, int d){
-    
-    int longitud = digitos(x);
 
-    for (int i = 0; i <= longitud; i++ ){
-      if (digitoN(x,i) == d) {
-        return i;
+    if (d > digitos(x)) {
+      return -1;
+    } else {
+      for (int i = 0; i <= digitos(x); i++ ){
+        if (digitoN(x,i) == d) {
+          return i;
+        }
       }
     }
-    return -1;
+
   }
 
   /**
