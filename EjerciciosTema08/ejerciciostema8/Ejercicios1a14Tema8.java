@@ -25,15 +25,19 @@ public class Ejercicios1a14Tema8 {
    */
   
   public static boolean esPrimo(int x){
-  
-     boolean esPrimo = true;
-     long divisor = Math.round(Math.sqrt(x));;
-     
-     do {
-       esPrimo = !((x % divisor) == 0);
-       divisor--;
-     } while ((esPrimo) && (divisor >= 2));
-     return esPrimo;
+
+    if (x == 1) {
+      return true;
+    } else {
+      boolean esPrimo = true;
+      long divisor = Math.round(Math.sqrt(x));;
+      do {
+        esPrimo = !((x % divisor) == 0);
+        divisor--;
+      } while ((esPrimo) && (divisor >= 2));
+      return esPrimo;
+    }
+
   }
   
   /**
@@ -45,9 +49,7 @@ public class Ejercicios1a14Tema8 {
   
   public static int siguientePrimo(int x){
     
-    while (!esPrimo(x)){
-      x++;
-    }
+    while (!esPrimo(++x)){ }
     return x;
   }
   
