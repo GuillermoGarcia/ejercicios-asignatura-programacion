@@ -11,7 +11,7 @@ public class TestEjercicios1a14 {
 
   public static void main (String args[]) {
 
-    int[] numeros = new int[16];
+    int[] numeros = new int[15];
 
     int maximo = Integer.MAX_VALUE / 100;
 
@@ -37,8 +37,6 @@ public class TestEjercicios1a14 {
     numeros[14] = (numeros[2]<=numeros[3])?
                   Ejercicios1a14Tema8.trozoDeNumero(numeros[0],numeros[2],numeros[3]):
                   Ejercicios1a14Tema8.trozoDeNumero(numeros[0],numeros[3],numeros[2]);
-    numeros[15] = Ejercicios1a14Tema8.juntaNumeros(numeros[1],numeros[3]);
-    String texto = "";
 
     System.out.println("\n\n\n");
     
@@ -47,9 +45,9 @@ public class TestEjercicios1a14 {
     System.out.println("El número " + numeros[0] + ((Ejercicios1a14Tema8.esCapicua(numeros[0]))?" "
     :" no") + " es capicúa.\n");
 
-    if (!Ejercicios1a14Tema8.esPrimo(numeros[1])) { texto = " no"; }
-    System.out.println("El número " + numeros[1] + texto + " es primo.\n");
-    texto = "";
+    System.out.println("El número " + numeros[1] + ((Ejercicios1a14Tema8.esPrimo(numeros[1]))?" "
+    :" no") + " es primo.\n");
+
 
     System.out.println("El número " + numeros[4] + " es el primer primo mayor al"
     + " número " + numeros[1] + ".\n");
@@ -84,8 +82,8 @@ public class TestEjercicios1a14 {
     numeros[0] + " entre la posición " + ((numeros[2]<=numeros[3])?numeros[2]:numeros[3]) +
     " y la posición " + ((numeros[2]<=numeros[3])?numeros[3]:numeros[2]) + ".\n");
 
-    System.out.println(numeros[15] + " es el resultado de juntar los números " + numeros[1] + " y "
-    + numeros[3] + ".\n");
+    System.out.println(Ejercicios1a14Tema8.juntaNumeros(numeros[0],numeros[1]) +
+    " es el resultado de juntar los números " + numeros[0] + " y " + numeros[1] + ".\n");
 
   }
 }

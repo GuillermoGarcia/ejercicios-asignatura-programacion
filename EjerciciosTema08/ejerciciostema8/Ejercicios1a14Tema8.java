@@ -171,7 +171,20 @@ public class Ejercicios1a14Tema8 {
   }
 
   /**
-   * Devuelve el resultado de quitarle 'n' digitos por detrás (izquierda) al número 'x'
+   * Devuelve el resultado de quitarle 'n' digitos por detrás (derecha) al número 'x'
+   * 
+   * @param x, número largo entero
+   * @param n, número entero, cantidad de digitos a quitar
+   * @return <b>long</b>, número largo entero tras quitar 'n' digitos por detras al número 'x'
+   */
+  
+  public static long quitaPorDetras(long x, int n){
+    return (x / potencia(10,n));
+  }
+
+
+  /**
+   * Devuelve el resultado de quitarle 'n' digitos por detrás (derecha) al número 'x'
    * 
    * @param x, número entero
    * @param n, número entero, cantidad de digitos a quitar
@@ -183,7 +196,19 @@ public class Ejercicios1a14Tema8 {
   }
   
   /**
-   * Devuelve el resultado de quitarle 'n' digitos por delante (derecha) al número 'x'
+   * Devuelve el resultado de quitarle 'n' digitos por delante (izquierda) al número 'x'
+   * 
+   * @param x, número largo entero
+   * @param n, número entero, cantidad de digitos a quitar
+   * @return <b>long</b>, número largo entero tras quitar 'n' digitos por delante al número 'x'
+   */
+
+  public static long quitaPorDelante(long x, int n){
+    return voltea(quitaPorDetras(voltea(x),n));
+  }
+
+  /**
+   * Devuelve el resultado de quitarle 'n' digitos por delante (izquierda) al número 'x'
    * 
    * @param x, número entero
    * @param n, número entero, cantidad de digitos a quitar
@@ -195,7 +220,19 @@ public class Ejercicios1a14Tema8 {
   }
 
   /**
-   * Devuelve el resultado de añadirle el digito 'd' por detrás (izquierda) al número 'x'
+   * Devuelve el resultado de añadirle el digito 'd' por detrás (derecha) al número 'x'
+   * 
+   * @param x, número largo entero
+   * @param d, número entero, digito a añadir
+   * @return <b>long</b>, número largo entero tras añadir el digito 'd' por detrás al número 'x'
+   */
+
+  public static long pegaPorDetras(long x, int d){
+    return (x * 10) + d;
+  }
+
+  /**
+   * Devuelve el resultado de añadirle el digito 'd' por detrás (derecha) al número 'x'
    * 
    * @param x, número entero
    * @param d, número entero, digito a añadir
@@ -203,13 +240,26 @@ public class Ejercicios1a14Tema8 {
    */
 
   public static int pegaPorDetras(int x, int d){
-
     return (x * 10) + d;
-
   }
   
   /**
-   * Devuelve el resultado de añadirle el digito 'd' por delante (derecha) al número 'x'
+   * Devuelve el resultado de añadirle el digito 'd' por delante (izquierda) al número 'x'
+   * 
+   * @param x, número largo entero
+   * @param d, número entero, digito a añadir
+   * @return <b>long</b>, número largo entero tras añadir el digito 'd' por delante al número 'x'
+   */
+  
+  public static long pegaPorDelante(long x, int d){
+
+    int longitud = digitos(x);
+    return (d * potencia(10,longitud)) + x ;
+
+  }
+
+  /**
+   * Devuelve el resultado de añadirle el digito 'd' por delante (izquierda) al número 'x'
    * 
    * @param x, número entero
    * @param d, número entero, digito a añadir

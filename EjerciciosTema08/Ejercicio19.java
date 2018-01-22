@@ -12,7 +12,7 @@ public class Ejercicio19 {
 
   public static void main (String[] args) {
 
-    int numero = 492857;
+    int numero = 12;
 
     System.out.println("El numero Binario " + DecimalABinario(numero) + " en Decimal es " +
     BinarioADecimal(DecimalABinario(numero)) + ".\n");
@@ -25,24 +25,28 @@ public class Ejercicio19 {
 
   public static long DecimalABinario(int numero){
 
-    long binario = 0;
-    while (numero > 2) {
-      binario = ((long)numero % 2) + (binario * 10);
+    long binario = 2;
+    int temp = numero;
+    do {
+      binario = Ejercicios1a14Tema8.pegaPorDetras(binario, (numero % 2));
       numero /= 2;
-    }
-    return Ejercicios1a14Tema8.voltea((binario * 10) + numero);
+    } while (numero > 1);
+    binario = Ejercicios1a14Tema8.pegaPorDetras(binario, 1);
+    binario = Ejercicios1a14Tema8.voltea(binario);
+    return Ejercicios1a14Tema8.quitaPorDetras(binario,1);
 
   }
 
   public static long DecimalAOctal(int numero){
 
-    long octal = 0;
+    long octal = 9;
     while (numero > 8) {
       octal = ((long)numero % 8) + (octal * 10);
       numero /= 8;
     }
     octal = (octal * 10) + numero;
-    return Ejercicios1a14Tema8.voltea(octal);
+    octal = Ejercicios1a14Tema8.voltea(octal);
+    return Ejercicios1a14Tema8.quitaPorDetras(octal,1);
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * Pruebas para el paquete con los ejercicios 1 a 14 del Tema 8 *
+ * Pruebas para el paquete con los ejercicios 20 a 28 del Tema 8 *
  *
  *
  * @author: Guillermo García
