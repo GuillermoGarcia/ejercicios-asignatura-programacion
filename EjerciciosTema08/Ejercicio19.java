@@ -12,7 +12,7 @@ public class Ejercicio19 {
 
   public static void main (String[] args) {
 
-    int numero = 12;
+    int numero = 55;
 
     System.out.println("El numero Binario " + DecimalABinario(numero) + " en Decimal es " +
     BinarioADecimal(DecimalABinario(numero)) + ".\n");
@@ -25,47 +25,50 @@ public class Ejercicio19 {
 
   public static long DecimalABinario(int numero){
 
-    long binario = 2;
-    int temp = numero;
-    do {
-      binario = Ejercicios1a14Tema8.pegaPorDetras(binario, (numero % 2));
-      numero /= 2;
-    } while (numero > 1);
-    binario = Ejercicios1a14Tema8.pegaPorDetras(binario, 1);
-    binario = Ejercicios1a14Tema8.voltea(binario);
-    return Ejercicios1a14Tema8.quitaPorDetras(binario,1);
+    if (numero > 1) {
+      return (DecimalABinario(numero / 2) * 10) + ((long)numero % 2);
+    } else {
+      return (long)numero;
+    }
 
   }
 
   public static long DecimalAOctal(int numero){
 
-    long octal = 9;
-    while (numero > 8) {
-      octal = ((long)numero % 8) + (octal * 10);
-      numero /= 8;
+    if (numero > 7) {
+      return (DecimalAOctal(numero / 8) * 10) + ((long)numero % 8);
+    } else {
+      return numero;
     }
-    octal = (octal * 10) + numero;
-    octal = Ejercicios1a14Tema8.voltea(octal);
-    return Ejercicios1a14Tema8.quitaPorDetras(octal,1);
 
   }
 
   public static String DecimalAHexadecimal(int numero){
 
     String hex = "";
-    while (numero > 0) {
+    if (numero > 15){
       switch (numero % 16){
-        case 10: hex = "A" + hex; break;
-        case 11: hex = "B" + hex; break;
-        case 12: hex = "C" + hex; break;
-        case 13: hex = "D" + hex; break;
-        case 14: hex = "E" + hex; break;
-        case 15: hex = "F" + hex; break;
-        default: hex = (numero % 16) + hex;
+        case 10: hex = "A"; break;
+        case 11: hex = "B"; break;
+        case 12: hex = "C"; break;
+        case 13: hex = "D"; break;
+        case 14: hex = "E"; break;
+        case 15: hex = "F"; break;
+        default: hex = "" + (numero % 16);
       }
-      numero /= 16;
+      return DecimalAHexadecimal(numero / 16) + hex;
+    } else {
+      switch (numero % 16){
+        case 10: hex = "A"; break;
+        case 11: hex = "B"; break;
+        case 12: hex = "C"; break;
+        case 13: hex = "D"; break;
+        case 14: hex = "E"; break;
+        case 15: hex = "F"; break;
+        default: hex = "" + (numero);
+      }
+      return hex;
     }
-    return hex;
 
   }
 

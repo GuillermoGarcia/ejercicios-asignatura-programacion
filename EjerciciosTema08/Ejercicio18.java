@@ -19,12 +19,11 @@ public class Ejercicio18 {
 
   public static long DecimalABinario(int numero){
 
-    long binario = 0;
-    while (numero > 2) {
-      binario = ((long)numero % 2) + (binario * 10);
-      numero /= 2;
+    if (numero > 1) {
+      return (DecimalABinario(numero / 2) * 10) + ((long)numero % 2);
+    } else {
+      return 1;
     }
-    return Ejercicios1a14Tema8.voltea((binario * 10) + numero);
   }
 }
 
