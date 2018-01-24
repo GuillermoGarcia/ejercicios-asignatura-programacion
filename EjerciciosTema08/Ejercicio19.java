@@ -12,7 +12,7 @@ public class Ejercicio19 {
 
   public static void main (String[] args) {
 
-    int numero = 55;
+    int numero = (int)(Math.random() * 100) + 1;
 
     System.out.println("El numero Binario " + DecimalABinario(numero) + " en Decimal es " +
     BinarioADecimal(DecimalABinario(numero)) + ".\n");
