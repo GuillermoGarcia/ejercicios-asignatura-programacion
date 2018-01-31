@@ -153,14 +153,10 @@ public class Ejercicios1a14Tema8 {
 
   public static int posicionDeDigito (long x, int d){
 
-    if (d > digitos(x)) {
-      return -1;
-    } else {
-      for (int i = 0; i <= digitos(x); i++ ){
-        if (digitoN(x,i) == d) {
-          return i;
-        }
-      }
+    for (int i = 0; i <= digitos(x); i++ ){
+      if (digitoN(x,i) == d) {
+        return i;
+      } 
     }
     return -1;
 
@@ -253,8 +249,9 @@ public class Ejercicios1a14Tema8 {
   
   public static long pegaPorDelante(long x, int d){
 
-    int longitud = digitos(x);
-    return (d * potencia(10,longitud)) + x ;
+    /*int longitud = digitos(x);
+    return (d * potencia(10,longitud)) + x ;*/
+    return juntaNumeros((long)d,x);
 
   }
 
@@ -268,8 +265,9 @@ public class Ejercicios1a14Tema8 {
   
   public static int pegaPorDelante(int x, int d){
 
-    int longitud = digitos(x);
-    return (d * potencia(10,longitud)) + x ;
+    /*int longitud = digitos(x);
+    return (d * potencia(10,longitud)) + x ;*/
+    return (int)juntaNumeros(d,x);
 
   }
   
@@ -304,6 +302,10 @@ public class Ejercicios1a14Tema8 {
   
   public static long juntaNumeros(int x, int y){
     return ((long)x * potencia(10,digitos(y))) + y;
+  }
+
+  public static long juntaNumeros(long x, long y){
+    return (x * potencia(10,digitos(y))) + y;
   }
   
 }
