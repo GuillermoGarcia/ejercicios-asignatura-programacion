@@ -43,21 +43,11 @@ public class Ejercicio40 {
   public static int[] filtraCon7(int x[]){
 
     int[] temp = new int[0];
-    boolean con7 = false;
     for (int i = 0; i < x.length; i++){
-      int n = x[i];
-      for (int j = 0; j < Ejercicios1a14Tema8.digitos(x[i]); j++){
-        if ((n % 10) == 7){
-          con7 = true;
-        }
-        n /= 10;
-      }
-      if (con7){
+      if (Ejercicios1a14Tema8.posicionDeDigito(x[i],7) >= 0){
         temp = insertarUltimaPosicion(temp,x[i]);
-        con7 = false;
       }
     }
-
     return temp;
 
   }
