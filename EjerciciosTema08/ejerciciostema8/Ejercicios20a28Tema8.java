@@ -30,8 +30,10 @@ public class Ejercicios20a28Tema8 {
 
   public static int minimoArrayInt(int[] x){
 
-    int min = x[0];
-    for (int i = 1; i < x.length; i++){ if(x[i] < min) min = x[i]; }
+    /*int min = x[0];
+    for (int i = 1; i < x.length; i++){ if(x[i] < min) min = x[i]; }*/
+    int min = Integer.MAX_VALUE;
+    for (int n : x){ if(n > min) min = n; }
     return min;
 
   }
@@ -45,8 +47,10 @@ public class Ejercicios20a28Tema8 {
 
   public static int maximoArrayInt(int[] x){
 
-    int max = x[0];
-    for (int i = 1; i < x.length; i++){ if(x[i] > max) max = x[i]; }
+    /*int max = x[0];
+    for (int i = 1; i < x.length; i++){ if(x[i] > max) max = x[i]; }*/
+    int max = Integer.MIN_VALUE;
+    for (int n : x){ if(n > max) max = n; }
     return max;
 
   }
@@ -60,8 +64,10 @@ public class Ejercicios20a28Tema8 {
 
   public static double mediaArrayInt(int[] x){
 
-    double total = x[0];
-    for (int i = 1; i < x.length; i++){ total += x[i]; }
+    /*double total = x[0];
+    for (int i = 1; i < x.length; i++){ total += x[i]; }*/
+    double total = 0;
+    for (int n : x){ total += n; }
     return (total / x.length);
 
  }
