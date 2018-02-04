@@ -1,5 +1,5 @@
 /*
- * Solución Ejercicio 4 Tema 9 Clase Fracción
+ * Solución Ejercicio 4 Tema 9 Clase Main
  *
  * Crea la clase Fracción . Los atributos serán numerador y denominador . Y algunos de los métodos
  * pueden ser invierte, simplifica, multiplica, divide, etc....
