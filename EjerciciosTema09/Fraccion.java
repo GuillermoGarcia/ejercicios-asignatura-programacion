@@ -47,10 +47,8 @@ public class Fraccion {
     return new Fraccion (this.numerador, this.denominador);
   }
 
-  public void invierte (){
-    int aux = this.getNumerador();
-    this.numerador = this.denominador;
-    this.denominador = aux;
+  public Fraccion invierte (){
+    return new Fraccion (this.denominador,this.numerador);
   }
 
   public void simplifica(){
@@ -69,48 +67,38 @@ public class Fraccion {
     }
   }
 
-  public void multiplica(int n){
-    this.numerador *= n;
-    this.simplifica();
+  public Fraccion multiplica(int n){
+    return new Fraccion(this.numerador * n,this.denominador);
   }
 
-  public void divide(int n){
-    this.denominador *= n;
-    this.simplifica();
+  public Fraccion divide(int n){
+    return new Fraccion(this.numerador,this.denominador * n);
   }
 
-  public void multiplica(Fraccion f){
-    this.multiplica(f.getNumerador());
-    this.divide(f.getDenominador());
-    this.simplifica();
+  public Fraccion multiplica(Fraccion f){
+    return new Fraccion(this.numerador * f.getNumerador(),this.denominador * f.getDenominador());
   }
 
-  public void divide(Fraccion f){
-    this.multiplica(f.getDenominador());
-    this.divide(f.getNumerador());
-    this.simplifica();
+  public Fraccion divide(Fraccion f){
+    return this.multiplica(f.invierte());
   }
 
-  public void suma(int n){
-    this.numerador += (n * this.denominador);
-    this.simplifica();
+  public Fraccion suma(int n){
+    return new Fraccion(this.numerador + (n * this.denominador),this.denominador);
   }
 
-  public void resta(int n){
-    this.numerador -= (n * this.denominador);
-    this.simplifica();
+  public Fraccion resta(int n){
+    return new Fraccion(this.numerador - (n * this.denominador),this.denominador);
   }
 
-  public void suma(Fraccion f){
-    this.numerador = (this.numerador * f.getDenominador()) + (this.denominador * f.getNumerador());
-    this.denominador *= f.getDenominador();
-    this.simplifica();
+  public Fraccion suma(Fraccion f){
+    return new Fraccion((this.numerador * f.getDenominador()) + (this.denominador * f.getNumerador())
+    ,this.denominador * f.getDenominador());
   }
 
-  public void resta(Fraccion f){
-    this.numerador = (this.numerador * f.getDenominador()) - (this.denominador * f.getNumerador());
-    this.denominador *= f.getDenominador();
-    this.simplifica();
+  public Fraccion resta(Fraccion f){
+    return new Fraccion((this.numerador * f.getDenominador()) - (this.denominador * f.getNumerador())
+    ,this.denominador * f.getDenominador());
   }
 
   public String toString(){

@@ -18,21 +18,11 @@ public class Ejercicio04 {
     Fraccion f2 = new Fraccion ((int)((Math.random() * 9) + 1),(int)((Math.random() * 9) + 1));
     System.out.println("Se ha creado la fracción " + f2);
 
-    Fraccion f3 = f1.duplica();
-    f3.suma(f2);
-    System.out.println(f1 + " + " + f2 + " = " + f3);
-    f3 = f1.duplica();
-    f3.resta(f2);
-    System.out.println(f1 + " - " + f2 + " = " + f3);
-    f3 = f1.duplica();
-    f3.multiplica(f2);
-    System.out.println(f1 + " * " + f2 + " = " + f3);
-    f3 = f1.duplica();
-    f3.divide(f2);
-    System.out.println(f1 + " / " + f2 + " = " + f3);
-    f3 = f1.duplica();
-    f3.invierte();
-    System.out.println("La fracción " + f1 + " invertida es " + f3);
+    System.out.println(f1 + " + " + f2 + " = " + f1.suma(f2));
+    System.out.println(f1 + " - " + f2 + " = " + f1.resta(f2));
+    System.out.println(f1 + " * " + f2 + " = " + f1.multiplica(f2));
+    System.out.println(f1 + " / " + f2 + " = " + f1.divide(f2));
+    System.out.println("La fracción " + f1 + " invertida es " + f1.invierte());
 
   }
 }
