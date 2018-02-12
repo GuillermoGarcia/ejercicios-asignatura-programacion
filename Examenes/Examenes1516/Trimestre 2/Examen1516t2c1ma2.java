@@ -1,5 +1,5 @@
 /*
- * Solución Examen 15/16 Trimestre 2 Control 1 Modelo A Ejercicio 1
+ * Solución Examen 15/16 Trimestre 2 Control 1 Modelo A Ejercicio 2
  * 
  * Realiza un programa que, a partir de un array de 4 filas por 6 columnas con números generados al
  * azar entre 10 y 99, muestre a la derecha los mínimos de la fila y debajo los máximos de las
